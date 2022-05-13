@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Mycrud.Models.ViewModel.allclass>
+@{
+    ViewBag.Title = "AllDetails";
+}
+
+<h2>AllDetails</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quentity</th>
+        <th>Price</th>
+        <th>Category</th>
+    </tr>
+    @foreach(var all in Model)
+            {
+                <tr>
+                    <td>@all.Id</td>
+                    <td>@all.Name</td>
+                    <td>@all.Quantity</td>
+                    <td>@all.Price</td>
+                    <td>@all.Category</td>
+                </tr>
+            }
+</table>
